@@ -28,8 +28,6 @@ header{
     height: 4rem;
     transition: all 0.3s ease;
     width: 100%;
-}
-header:hover{
     background-color: black;
 }
 
@@ -116,6 +114,11 @@ nav ul li img{
 .btn:hover {
     background-color: black;
     color: white;
+}
+.footer{
+    background-color: black;
+    color: white;
+    width: 100%;
 }
 /* .first-top{
     width: 20%;

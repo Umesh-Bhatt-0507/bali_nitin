@@ -1,65 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Bali Tourism</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/png" href="../images/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Register - Bali Tourism</title>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <ul class="head-ul-one">
-                <li><img src="../images/Untitled_design-removebg-preview.jpg" alt=""></li>
-            </ul>
-            <ul class="head-ul-two">
-                <div class="first">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="highlights.html">Highlights</a></li>
-                    <li><a href="attractions.html">Attractions</a></li>
-                    <li><a href="tips.html">Travel Tips</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                </div>
-                <div class="second">
-                    <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
-                    <li><a href="facebook.com"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-                    <li><a href="Instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-                </div>
-            </ul>
-        </nav>
-    </header>
+<body class="contact">
 
-    <!-- Hero Banner -->
-    <section class="hero" style="background-image: url('../images/bali-tips.jpg');">
-        <div class="hero-text">
-            <h1>Contact Us</h1>
-            <p>We’d love to hear from you!</p>
-        </div>
-    </section>
+  <!-- Navigation Buttons -->
+<div class="nav-buttons">
+  <!-- Back button first -->
+  <button onclick="history.back()" class="nav-btn back-btn">
+    <i class="fas fa-arrow-left"></i>
+  </button>
 
-    <!-- Contact Form -->
-    <section class="form-section">
-        <h2>Send us your feedback</h2>
-        <form action="#" method="post">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name">
+  <!-- Home button beside it -->
+  <a href="index.html" class="nav-btn home-btn">
+    <i class="fas fa-home"></i>
+  </a>
+  </div>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email">
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
+  <section class="contact-container">
+    <!-- Registration Form -->
+    <div class="form-box register">
+      <h2><i class="fas fa-plane-departure"></i> Register for Bali Trip</h2>
+      <form class="contact-form">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
 
-            <button type="submit" class="btn">Submit</button>
-        </form>
-    </section>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Bali Tourism Website | Designed for COM4014</p>
-        <p>Follow us: 🌐 Facebook | 📸 Instagram | 🐦 Twitter</p>
-    </footer>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+        <label for="date">Preferred Travel Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="people">Number of Travelers</label>
+        <input type="number" id="people" name="people" min="1" required placeholder="e.g. 2">
+
+        <label for="package">Choose Package</label>
+        <select id="package" name="package" required>
+          <option value="">-- Select a Package --</option>
+          <option value="standard">Standard (Budget Friendly)</option>
+          <option value="luxury">Luxury (Premium Hotels)</option>
+          <option value="adventure">Adventure (Hiking & Activities)</option>
+          <option value="cultural">Cultural (Temples & Traditions)</option>
+        </select>
+
+        <label for="preferences">Extra Preferences</label>
+        <textarea id="preferences" name="preferences" rows="3" placeholder="Any special requests (food, stay, activities)..."></textarea>
+
+        <button type="submit" class="btn">Register Now</button>
+      </form>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="form-box feedback">
+      <h2><i class="fas fa-comments"></i> Feedback Form</h2>
+      <form class="contact-form">
+        <label for="name-feedback">Full Name</label>
+        <input type="text" id="name-feedback" name="name-feedback" required placeholder="Enter your name">
+
+        <label for="email-feedback">Email Address</label>
+        <input type="email" id="email-feedback" name="email-feedback" required placeholder="Enter your email">
+
+        <label for="experience">Your Experience</label>
+        <textarea id="experience" name="experience" rows="7" required placeholder="Share your Bali experience with us"></textarea>
+
+        <label for="rating">Rating (1-5)</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+        <label for="improvements">Suggestions for Improvement</label>
+        <textarea id="improvements" name="improvements" rows="7" placeholder="Tell us how we can improve..."></textarea>
+
+        <button type="submit" class="btn">Submit Feedback</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const registerForm = document.querySelector(".form-box.register .contact-form");
+
+      if (registerForm) {
+        registerForm.addEventListener("submit", function(event) {
+          event.preventDefault(); // stop default submission
+
+          // Simulate success (you can add real validation or server call here)
+          alert("✅ Registration successful! Redirecting to Travel Tips...");
+          
+          // Redirect to Tips page
+          window.location.href = "tips.html";
+        });
+      }
+    });
+  </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Registration form
+    const registerForm = document.querySelector(".form-box.register .contact-form");
+    if (registerForm) {
+      registerForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // stop default submission
+
+        // Simulate success
+        alert("✅ Registration successful! Redirecting to Travel Tips...");
+
+        // Clear form fields
+        registerForm.reset();
+
+        // Redirect to Tips page
+        window.location.href = "tips.html";
+      });
+    }
+
+    // Feedback form
+    const feedbackForm = document.querySelector(".form-box.feedback .contact-form");
+    if (feedbackForm) {
+      feedbackForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // stop default submission
+
+        // Simulate success
+        alert("✅ Feedback submitted successfully! Thank you for sharing.");
+
+        // Clear form fields
+        feedbackForm.reset();
+      });
+    }
+  });
+  </script>
+
+
 </body>
 </html>

@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bali Attractions</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/png" href="../images/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bali Attractions</title>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul class="head-ul-one">
-                <li><img src="../images/Untitled_design-removebg-preview.jpg" alt=""></li>
-            </ul>
-            <ul class="head-ul-two">
-                <div class="first">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="highlights.html">Highlights</a></li>
-                    <li><a href="attractions.html">Attractions</a></li>
-                    <li><a href="tips.html">Travel Tips</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                </div>
-                <div class="second">
-                    <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
-                    <li><a href="facebook.com"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-                    <li><a href="Instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-                </div>
-            </ul>
-        </nav>
-    </header>
+<body class="attractions">
 
-    <section class="hero" style="background-image: url('../images/bali-attractions.jpg');">
-        <div class="hero-text">
-            <h1>Top Attractions in Bali</h1>
-            <p>Discover the must-see destinations across the island.</p>
-        </div>
-    </section>
+  <!-- Central Text Box -->
+  <section class="main-text">
+    <h1>✨ What to Explore in Bali ✨</h1>
+    <p>Temples, beaches, waterfalls, and rice terraces — Bali is a paradise of unforgettable sights. Here are 10 must‑visit attractions.</p>
+     <a href="contact.html" class="book-btn">Book Trip Now</a>
+</section>
 
-    <section class="grid">
-        <div class="card">
-            <img src="../images/bali-gallery1.jpg" alt="Ubud Rice Terraces">
-            <h3>Ubud Rice Terraces</h3>
-            <p>Iconic landscapes showcasing Bali’s agricultural heritage.</p>
-        </div>
-        <div class="card">
-            <img src="../images/bali-gallery2.jpg" alt="Tanah Lot Temple">
-            <h3>Tanah Lot Temple</h3>
-            <p>A sacred sea temple offering stunning sunset views.</p>
-        </div>
-        <div class="card">
-            <img src="../images/bali-gallery3.jpg" alt="Mount Batur">
-            <h3>Mount Batur</h3>
-            <p>Popular sunrise trek with breathtaking volcanic scenery.</p>
-        </div>
-    </section>
+  <!-- Attraction Cards -->
+  <div class="attraction-grid">
+    <!-- Corners -->
+    <div class="attraction corner top-left">
+      <a href="https://www.google.com/search?q=Uluwatu+Temple+Bali" target="_blank">
+        <img src="../images/attractions/tlc.png" alt="Uluwatu Temple">
+      </a>
+      <h3>Uluwatu Temple</h3>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 Bali Tourism Website | Designed for COM4014</p>
-        <p>Follow us: 🌐 Facebook | 📸 Instagram | 🐦 Twitter</p>
-    </footer>
+    <div class="attraction corner top-right">
+      <a href="https://www.google.com/search?q=Tegallalang+Rice+Terraces+Bali" target="_blank">
+        <img src="../images/attractions/trc.png" alt="Tegallalang Rice Terraces">
+      </a>
+      <h3>Tegallalang Rice Terraces</h3>
+    </div>
+
+    <div class="attraction corner bottom-left">
+      <a href="https://www.google.com/search?q=Tanah+Lot+Bali" target="_blank">
+        <img src="../images/attractions/blc.png" alt="Tanah Lot">
+      </a>
+      <h3>Tanah Lot</h3>
+    </div>
+
+    <div class="attraction corner bottom-right">
+      <a href="https://www.google.com/search?q=Mount+Batur+Bali" target="_blank">
+        <img src="../images/attractions/brc.png" alt="Mount Batur">
+      </a>
+      <h3>Mount Batur</h3>
+    </div>
+
+    <!-- Above & Below -->
+    <div class="attraction above left">
+      <a href="https://www.google.com/search?q=Besakih+Temple+Bali" target="_blank">
+        <img src="../images/attractions/tl.png" alt="Besakih Temple">
+      </a>
+      <h3>Besakih Temple</h3>
+    </div>
+
+    <div class="attraction above right">
+      <a href="https://www.google.com/search?q=Ubud+Monkey+Forest+Bali" target="_blank">
+        <img src="../images/attractions/tr.png" alt="Ubud Monkey Forest">
+      </a>
+      <h3>Ubud Monkey Forest</h3>
+    </div>
+
+    <div class="attraction below left">
+      <a href="https://www.google.com/search?q=Kuta+Beach+Bali" target="_blank">
+        <img src="../images/attractions/dl.png" alt="Kuta Beach">
+      </a>
+      <h3>Kuta Beach</h3>
+    </div>
+
+    <div class="attraction below right">
+      <a href="https://www.google.com/search?q=Gitgit+Waterfall+Bali" target="_blank">
+        <img src="../images/attractions/dr.png" alt="Gitgit Waterfall">
+      </a>
+      <h3>Gitgit Waterfall</h3>
+    </div>
+
+    <!-- Left & Right -->
+    <div class="attraction side left">
+      <a href="https://www.google.com/search?q=Nusa+Penida+Bali" target="_blank">
+        <img src="../images/attractions/l.png" alt="Nusa Penida">
+      </a>
+      <h3>Nusa Penida</h3>
+    </div>
+
+    <div class="attraction side right">
+      <a href="https://www.google.com/search?q=Goa+Gajah+Bali" target="_blank">
+        <img src="../images/attractions/r.png" alt="Goa Gajah">
+      </a>
+      <h3>Goa Gajah</h3>
+    </div>
+  </div>
+
 </body>
 </html>

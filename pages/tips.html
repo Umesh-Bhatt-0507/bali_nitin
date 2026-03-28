@@ -1,59 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bali Travel Tips</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/png" href="../images/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bali Travel Tips</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="head-ul-one">
-                <li><img src="../images/Untitled_design-removebg-preview.jpg" alt=""></li>
-            </ul>
-            <ul class="head-ul-two">
-                <div class="first">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="highlights.html">Highlights</a></li>
-                    <li><a href="attractions.html">Attractions</a></li>
-                    <li><a href="tips.html">Travel Tips</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                </div>
-                <div class="second">
-                    <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
-                    <li><a href="facebook.com"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-                    <li><a href="Instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-                </div>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero" style="background-image: url('../images/bali-tips.jpg');">
-        <div class="hero-text">
-            <h1>Travel Tips for Bali</h1>
-            <p>Plan your trip with confidence and ease.</p>
-        </div>
-    </section>
+  <!-- Navigation Buttons -->
+  <button onclick="history.back()" class="back-btn">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+  <a href="index.html" class="home-btn">
+    <i class="fas fa-home"></i>
+  </a>
 
-    <section class="content">
-        <h2>Currency</h2>
-        <p>The local currency is the Indonesian Rupiah (IDR).</p>
+  <!-- Page Header -->
+  <header class="tips-header">
+    <h1>💡 Bali Travel Tips</h1>
+    <p>Essential advice to make your trip smooth and enjoyable.</p>
+  </header>
 
-        <h2>Transport</h2>
-        <p>Taxis and ride-hailing apps are common in urban areas.</p>
+  <!-- Tips Section -->
+  <section class="tips-container">
+    <!-- Existing 8 tips -->
+    <div class="tip-card">
+      <i class="fas fa-calendar-alt"></i>
+      <h3>Best Time to Visit</h3>
+      <p>April to October offers sunny weather and fewer rains — perfect for beaches and outdoor adventures.</p>
+    </div>
 
-        <h2>Safety</h2>
-        <p>Bali is generally safe, but always be mindful of your belongings.</p>
+    <div class="tip-card">
+      <i class="fas fa-money-bill-wave"></i>
+      <h3>Currency & Payments</h3>
+      <p>Carry Indonesian Rupiah (IDR). ATMs are common, but keep cash for local shops and markets.</p>
+    </div>
 
-        <h2>Best Time to Visit</h2>
-        <p>The dry season (April to October) is ideal for beach activities and sightseeing.</p>
-    </section>
+    <div class="tip-card">
+      <i class="fas fa-bus"></i>
+      <h3>Transport Options</h3>
+      <p>Scooters are popular for short trips. For longer journeys, taxis and private drivers are reliable.</p>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 Bali Tourism Website | Designed for COM4014</p>
-        <p>Follow us: 🌐 Facebook | 📸 Instagram | 🐦 Twitter</p>
-    </footer>
+    <div class="tip-card">
+      <i class="fas fa-university"></i>
+      <h3>Temple Etiquette</h3>
+      <p>Wear modest clothing and sarongs when visiting temples. Respect local customs and ceremonies.</p>
+    </div>
+
+    <div class="tip-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Safety & Health</h3>
+      <p>Stay hydrated, use sunscreen, and be cautious with street food. Always keep travel insurance handy.</p>
+    </div>
+
+    <div class="tip-card">
+      <i class="fas fa-utensils"></i>
+      <h3>Food & Dining</h3>
+      <p>Try local dishes like Nasi Goreng and Satay. Stick to busy restaurants for hygiene and authentic flavors.</p>
+    </div>
+
+    <div class="tip-card">
+      <i class="fas fa-language"></i>
+      <h3>Language Basics</h3>
+      <p>Learning a few Indonesian phrases like “Terima Kasih” (Thank you) goes a long way in connecting with locals.</p>
+    </div>
+
+    <div class="tip-card">
+      <i class="fas fa-wifi"></i>
+      <h3>Connectivity</h3>
+      <p>Buy a local SIM card for affordable data. Wi‑Fi is common in hotels and cafes, but mobile data is more reliable.</p>
+    </div>
+
+    <!-- New Tips -->
+    <div class="tip-card">
+      <i class="fas fa-sun"></i>
+      <h3>Weather Prep</h3>
+      <p>Pack light cotton clothes for the heat, but also carry a raincoat or umbrella during monsoon months.</p>
+    </div>
+
+    <div class="tip-card">
+      <i class="fas fa-shopping-bag"></i>
+      <h3>Shopping Tips</h3>
+      <p>Bargaining is common in local markets. Start low, smile, and enjoy the experience of negotiating fair prices.</p>
+    </div>
+  </section>
+
+  <!-- Thank You Footer -->
+  <footer class="thankyou-footer">
+    <p>🙏 Thank you for visiting our Bali Travel Tips page. Wishing you a wonderful journey!</p>
+  </footer>
+
 </body>
 </html>

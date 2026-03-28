@@ -1,0 +1,469 @@
+/* gallery box */
+
+/* General Page Styling */
+body.gallery {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: url('../images/gallery-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Header Banner with background photo */
+.gallery-header {
+  text-align: center;
+  padding: 60px 20px;
+  /* 👉 Replace the path below with the actual location of your image */
+  background: url('../images/gallery_back.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 20px; 
+}
+.gallery-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* overlay for readability */
+  backdrop-filter: blur(4px);
+}
+.gallery-header h1,
+.gallery-header p {
+  position: relative;
+  z-index: 1;
+}
+.gallery-header h1 {
+  font-size: 2.8em;
+  color: #ffd166;
+  margin: 0;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+.gallery-header p {
+  font-size: 1.3em;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* Masonry-style gallery */
+.gallery-section {
+  padding: 0;
+}
+.gallery-masonry {
+  column-count: 4;
+  column-gap: 15px;
+  margin-top: 0;
+}
+.gallery-masonry img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s;
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+.gallery-masonry img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Floating Booking Button */
+.floating-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #06d6a0;   /* green */
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s, background 0.3s;
+  z-index: 1000;
+}
+.floating-btn:hover {
+  background: #118ab2;   /* aqua-blue on hover */
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Back button (arrow) */
+.back-btn {
+  position: fixed;       /* pin it on screen */
+  top: 30px;             /* top-left corner */
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;    /* round shape */
+  background: #06d6a0;   /* green */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s, background 0.3s;
+  z-index: 1000;
+}
+
+.back-btn:hover {
+  background: #118ab2;   /* aqua-blue on hover */
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+
+/*tips page*/
+
+/* Tips Page Styling */
+
+body {
+  /* overflow-y: hidden;   */
+  overflow-x: hidden;   /* hides horizontal scrollbar too */
+  background-image: url("../images/bali_back.png"); /* replace with your image path */
+  background-size: cover;       /* make sure it covers the whole screen */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat; /* prevent tiling */
+  min-height: 100vh;            /* full viewport height */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Tips Page Header */
+.tips-header {
+  text-align: center;
+  margin-top: 100px;
+  color: #ffffff;          /* bright white for visibility */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6); /* glow for contrast */
+}
+
+.tips-header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.tips-header p {
+  font-size: 1.2em;
+  color: #f1f1f1;          /* softer white for subtitle */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.tip-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tip-card i {
+  font-size: 2em;
+  color: #06d6a0;
+  margin-bottom: 12px;
+}
+
+.tip-card h3 {
+  margin-bottom: 10px;
+  color: #118ab2;
+}
+
+.tip-card p {
+  font-size: 0.95em;
+  color: #333;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Thank You Footer */
+.thankyou-footer {
+  text-align: center;
+  padding: 12px;           /* reduced height */
+  margin-top: 20px;        /* bring it closer to content */
+  background: #06d6a0;     /* elegant green instead of yellow */
+  color: #fff;             /* white text for contrast */
+  font-size: 1em;
+  font-weight: bold;
+  border-top: 3px solid #118ab2; /* accent line */
+}
+
+/*Attractions*/
+
+/* General Page Styling */
+body.attractions {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: url('../images/attractions_back.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Central Text Box */
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 600px;       /* control width */
+  height: 180px;      /* fixed height */
+  overflow: hidden;   /* prevent scrollbars inside */
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  padding: 20px;      /* reduce padding if box is too tall */
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.7);
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers text vertically */
+  align-items: center;     /* centers text horizontally */
+}
+
+.main-text h1 {
+  margin: 0 0 15px 0; /* ensures spacing between heading and paragraph */
+  font-size: 2.5em;
+  color: #ffcc00;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+.main-text p {
+  margin: 0;          /* removes extra downward spacing */
+  font-size: 1.2em;
+  color: #f1f1f1;
+}
+
+
+/* Attraction Cards */
+.attraction {
+  position: absolute;
+  width: 300px;
+  height: 225px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.attraction img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.attraction h3 {
+  color: black; /* vibrant aqua */
+  margin: 5px 0;
+}
+
+.attraction:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+
+/* Positioning */
+.corner.top-left { top: 2%; left: 2%; }
+.corner.top-right { top: 2%; right: 2%; }
+.corner.bottom-left { bottom: 2%; left: 2%; }
+.corner.bottom-right { bottom: 2%; right: 2%; }
+
+.above.left { top: 2%; left: 26%; }
+.above.right { top: 2%; right: 26%; }
+.below.left { bottom: 2%; left: 26%; }
+.below.right { bottom: 2%; right: 26%; }
+
+.side.left { top: 50%; left: 2%; transform: translateY(-50%); }
+.side.right { top: 50%; right: 2%; transform: translateY(-50%); }
+
+.book-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #ef476f, #ffd166); /* elegant gradient */
+  color: #283d3b;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.book-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #ffd166, #06d6a0); /* hover gradient */
+  color: white;
+}
+
+
+
+
+
+/* Contact page */
+body.contact {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('../images/contact_back.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Navigation Buttons */
+/* Home button (house icon) */
+.home-btn {
+  position: fixed;       /* pin it on screen */
+  top: 30px;             /* same vertical alignment as back button */
+  left: 95px;            /* offset to sit beside back button */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;    /* round shape */
+  background: #06d6a0;   /* green */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s, background 0.3s;
+  z-index: 1000;
+}
+
+.home-btn:hover {
+  background: #118ab2;   /* aqua-blue on hover */
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Back button (arrow) */
+.back-btn {
+  position: fixed;       /* pin it on screen */
+  top: 30px;             /* top-left corner */
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;    /* round shape */
+  background: #06d6a0;   /* green */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s, background 0.3s;
+  z-index: 1000;
+}
+
+.back-btn:hover {
+  background: #118ab2;   /* aqua-blue on hover */
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+
+/* Container for forms */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 65%;
+  height: 90%;
+  gap: 100px; /* doubled gap */
+}
+
+/* Each form box */
+.form-box {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ffd166;
+  font-size: 1.4em;
+}
+
+/* Form styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.contact-form label {
+  margin: 8px 0 4px;
+  text-align: left;
+  font-size: 0.9em;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  background: rgba(255,255,255,0.85);
+  color: #333;
+  font-size: 0.9em;
+}
+.contact-form textarea {
+  resize: none;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #666;
+}
+.contact-form .btn {
+  background-color: #ffd166;
+  color: #283d3b;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95em;
+}
+.contact-form .btn:hover {
+  background-color: #ef476f;
+  color: white;
+}
